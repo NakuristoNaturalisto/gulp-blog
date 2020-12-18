@@ -13,6 +13,10 @@ body {
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: $white;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 *,
@@ -52,3 +56,4 @@ a {
 @import "blocks/work";
 @import "blocks/tags";
 @import "blocks/cabinet";
+@import "blocks/modal";

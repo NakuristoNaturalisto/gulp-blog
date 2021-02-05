@@ -3,6 +3,7 @@
   max-width: 21rem;
   width: 100%;
   height: 100%;
+
   &__input {
     display: block;
     padding: 1.2rem 2rem;
@@ -14,6 +15,12 @@
 
     &::placeholder {
       color: rgba($white, 0.4);
+    }
+
+    @include breakpoint($tablet-bp) {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      font-size: 1.6rem;
     }
   }
 }

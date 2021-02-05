@@ -5,6 +5,9 @@
   padding: 2.5rem;
   border-radius: 5px;
   overflow: hidden;
+  @include breakpoint($mobile-bp) {
+    padding: 1.5rem;
+  }
   &__header {
     margin: 0 0 2.5rem;
     &--preview {
@@ -23,12 +26,14 @@
     font-size: 1.8rem;
     color: $white;
     margin-bottom: 1.5rem;
+    line-height: 1.4;
     a {
       color: inherit;
     }
-    &--mb0 {
-      margin-bottom: 0;
+    &--open {
+      margin-bottom: 0.75rem;
     }
+
   }
   &__subtitle {
     margin-top: 3rem;
@@ -100,6 +105,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include breakpoint($mobile-bp) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
   &__data {
     color: #828282;
@@ -107,6 +116,10 @@
     display: flex;
     a {
       color: inherit;
+    }
+    @include breakpoint($mobile-bp) {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
     }
   }
   &__data-item {

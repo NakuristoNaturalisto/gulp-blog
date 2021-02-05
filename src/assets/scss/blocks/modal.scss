@@ -13,6 +13,10 @@
   align-items: center;
   padding: 1rem;
 
+  &.show {
+    display: flex;
+  }
+
   &__content {
     width: 100%;
     max-width: 500px;
@@ -20,9 +24,19 @@
     background-color: $primary;
     border-radius: 5px;
     position: relative;
-
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+    @include breakpoint($mobile-bp) {
+      padding: 5rem 3rem 3rem;
+    }
     &--contact {
       padding-bottom: 2.5rem;
+    }
+
+    &--story {
+      padding: 0;
+      background: none;
     }
   }
 
@@ -60,5 +74,10 @@
         text-decoration: none;
       }
     }
+  }
+
+  &__video {
+    display: block;
+    margin: 0 auto;
   }
 }
